@@ -1,0 +1,1 @@
+export { useCombinedGetterSetter } from './example';
