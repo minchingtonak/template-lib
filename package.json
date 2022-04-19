@@ -2,7 +2,7 @@
 	"name": "template-lib",
 	"version": "0.0.0",
 	"files": [
-		"dist"
+		"dist", "src"
 	],
 	"main": "./dist/template-lib.umd.js",
 	"module": "./dist/template-lib.es.js",
