@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import * as path from 'path';
 import checker from 'vite-plugin-checker';
 import react from '@vitejs/plugin-react';
-import dts from 'vite-dts';
+import dts from 'vite-plugin-dts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,7 +14,7 @@ export default defineConfig({
 				lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
 			},
 		}),
-		dts(),
+		dts({ rollupTypes: true }),
 	],
 	build: {
 		lib: {
@@ -39,7 +39,7 @@ export default defineConfig({
 		sourcemap: true,
 		// Reduce bloat from legacy polyfills.
 		target: 'esnext',
-		// Leave minification up to applications.
+		// Leave minification up to consumers.
 		minify: false,
 	},
 });
